@@ -1,0 +1,32 @@
+# DEEP LEARNING
+torch
+torchvision
+
+# TRAITEMENT IMAGES
+Pillow
+opencv-python
+albumentations
+
+# DATA SCIENCE
+numpy
+pandas
+scikit-learn
+
+# VISUALISATION
+matplotlib
+seaborn
+plotly
+
+# STREAMLIT + COMPOSANTS UI
+streamlit
+streamlit-option-menu
+streamlit-extras
+streamlit-image-comparison
+
+# UTILITAIRES
+tqdm
+pathlib2
+
+# JUPYTER
+jupyter
+ipykernel
