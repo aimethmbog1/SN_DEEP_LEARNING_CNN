@@ -39,7 +39,33 @@ from utils.metrics_utils import (
     compute_metrics, get_class_distribution,
     identify_problematic_classes
 )
+import sys
+import os
 
+# Récupère le chemin absolu du dossier contenant app.py
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+# Imports locaux (qui fonctionneront maintenant partout)
+from config import *
+from utils.data_utils import (
+    get_transforms, load_and_preprocess_image,
+    denormalize_image, get_sample_images
+)
+from utils.model_utils import (
+    load_model, predict, get_target_layer
+)
+from utils.visualization_utils import (
+    GradCAM, apply_gradcam_overlay,
+    plot_prediction_probabilities,
+    plot_class_distribution,
+    create_comparison_grid
+)
+from utils.metrics_utils import (
+    compute_metrics, get_class_distribution,
+    identify_problematic_classes
+)
 #  CONFIGURATION STREAMLIT
 
 st.set_page_config(
